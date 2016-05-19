@@ -1,0 +1,11 @@
+#add-external-media span {
+	color: #82878c;
+	font-size: 18px;
+	line-height: 1.4;
+}
+
+/* Kind of a hack to hide external media menu items from the main "Add Media" window! */
+#__wp-uploader-id-0 .media-menu .separator,
+#__wp-uploader-id-0 .media-menu .separator ~ .media-menu-item {
+	display: none;
+}
