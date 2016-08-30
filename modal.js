@@ -28,7 +28,7 @@ var ray = ray || {};
 
 				// Default tab to select when modal is loaded.
 				// @todo This should probably be configurable...
-				state: mexp && mexp.services && mexp.services.vimeo ? 'mexp-service-vimeo' : 'embed',
+				state: window.mexp && mexp.services && mexp.services.vimeo ? 'mexp-service-vimeo' : 'shortcode-ui',
 
 				// Disables plupload dropzone; plugins will be handling this by themselves.
 				uploader: false
