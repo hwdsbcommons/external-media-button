@@ -9,3 +9,8 @@
 #__wp-uploader-id-0 .media-menu .separator ~ .media-menu-item {
 	display: none;
 }
+
+/* Show 'Insert from URL' item */
+#__wp-uploader-id-0 .media-menu .media-menu-item:last-of-type {
+	display: block;
+}

@@ -64,7 +64,7 @@ var ray = ray || {};
 		 */
 		menuRender: function( view ) {
 			// 'Insert from link'
-			//view.unset( 'embed' );
+			view.unset( 'embed' );
 
 			// Playlists
 			view.unset( 'playlist' );
