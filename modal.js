@@ -47,6 +47,7 @@ var ray = ray || {};
 
 		open: function() {
 			$( '.media-modal' ).addClass( 'smaller' );
+			$( '.media-modal .media-menu .separator' ).hide();
 		},
 
 		ready: function() {
