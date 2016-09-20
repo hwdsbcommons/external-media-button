@@ -54,6 +54,11 @@ class Ray_External_Media_Button {
 	 * Enqueue assets.
 	 */
 	public function enqueue_assets() {
+		// Do not enqueue CSS when on "Press This" page.
+		if ( false !== strpos( $_SERVER['REQUEST_URI'], '/press-this.php' ) ) {
+			return;
+		}
+
 		$base = plugin_dir_url( __FILE__ );
 		wp_enqueue_script( 'ray-media', $base . 'modal.js', array(
 			'media-editor'
