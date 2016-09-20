@@ -78,8 +78,8 @@ var ray = ray || {};
 			view.unset( 'gallery' );
 
 			// 3rd-party
-			view.unset( 'mexp-service-twitter' );
-			view.unset( 'mexp-service-youtube' );
+			//view.unset( 'mexp-service-twitter' );
+			//view.unset( 'mexp-service-youtube' );
 			view.unset( 'mexp-service-instagram' );
 		},
 
