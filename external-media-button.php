@@ -73,7 +73,7 @@ class Ray_External_Media_Button {
 	 * Add inline CSS when on the "Press This" page.
 	 */
 	public function press_this_inline_css() {
-		// Do not enqueue CSS when on "Press This" page.
+		// Skip if we're not on the "Press This" page.
 		if ( false === strpos( $_SERVER['REQUEST_URI'], '/press-this.php' ) ) {
 			return;
 		}
