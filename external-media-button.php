@@ -35,8 +35,16 @@ class Ray_External_Media_Button {
 	protected function __construct() {
 		add_action( 'media_buttons',    array( $this, 'add_media_button' ) );
 		add_action( 'wp_enqueue_media', array( $this, 'enqueue_assets' ) );
-
 		add_action( 'admin_head',       array( $this, 'press_this_inline_css' ) );
+
+		// Shortcake - Remove "Add Post Element" button.
+		add_action( 'init', function() {
+			if ( class_exists( 'Shortcode_UI', false ) && is_callable( array( Shortcode_UI::get_instance(), 'action_media_buttons' ) ) ) {
+
+				remove_action( 'media_buttons', array( Shortcode_UI::get_instance(), 'action_media_buttons' ) );
+
+			}
+		}, 6 );
 	}
 
 	/**
